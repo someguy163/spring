@@ -8,7 +8,7 @@ public class CalAssembler {
 	CalMul calMul;
 	CalSub calSub;
 
-//	d
+
 	public CalAssembler() {
 		myCalculator =new MyCalculator();
 		calAdd = new CalAdd();
