@@ -7,6 +7,7 @@ public class MainClass {
 		MyCalculator calculator = new MyCalculator(); 
 
 		new CalAssembler();
+		
 	}
 
 }
