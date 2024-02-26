@@ -3,7 +3,7 @@ package ch02_pjt_02;
 public class MyCalculator {
 	
 	
-	public void calculator(int firstNum , int secondNum , ICalculator calculator) {
+	public void calculate(int firstNum , int secondNum , ICalculator calculator) {
 		int value = calculator.doOperation(firstNum, secondNum);
 		System.out.println("result : " + value);
 	}

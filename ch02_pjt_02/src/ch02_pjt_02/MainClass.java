@@ -9,7 +9,7 @@ public class MainClass {
 //		calculator.calDiv(10, 5 , new CalDiv());
 //		calculator.calMul(10, 5 , new CalMul());
 //		calculator.calSub(10, 5 , new CalSub());
-		calculator.calculator(10, 5, new CalAdd());
+		calculator.calculate(10, 5, new CalAdd());
 	}
 
 }
