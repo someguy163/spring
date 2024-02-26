@@ -1,4 +1,4 @@
-package ch02_pjt_02;
+package ch02_pjt_03;
 
 public class MainClass {
 
