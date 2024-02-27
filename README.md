@@ -17,7 +17,7 @@ iterator.hasNext()
 
 Ex
 
-		System.out.println("ArrayList");
+			System.out.println("ArrayList");
 		
 		ArrayList<String> cars = new ArrayList<>();
 		cars.add("a");
@@ -25,13 +25,13 @@ Ex
 		cars.add("c");
 		cars.add("d");
 		
-//		Iterator<String> iterator = cars.iterator();
-//		
-//		while (iterator.hasNext()) {
-//			
-//			System.out.println(iterator.next());
-//			
-//		}
+		Iterator<String> iterator = cars.iterator();
+		
+		while (iterator.hasNext()) {
+			
+			System.out.println(iterator.next());
+			
+		}
 		
 		for(String string : cars) {
 			System.out.println(string);
