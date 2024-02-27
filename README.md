@@ -15,5 +15,24 @@ iterator.hasNext()
 자동으로 다음
 
 
+Ex
+
+		ArrayList<String> cars = new ArrayList<>();
+		cars.add("a");
+		cars.add("b");
+		cars.add("c");
+		cars.add("d");
+		
+		Iterator<String> iterator = cars.iterator();
+		
+		while (iterator.hasNext()) {
+			String str = iterator.next();
+			System.out.println(str);
+			
+		}
+
+  출력 : a b c d
+
+
 pom.xml : 메이븐 설정파일
 필요한 라이브러리를 연결하고 빌드 설정을 담당함
