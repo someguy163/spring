@@ -20,11 +20,12 @@ public class KorEngHello {
 		if (select==1) {
 			korhello.sayHello();
 		}
-		else if (select==2) 
+		else if (select==2) {
 			enghello.sayHello();
-		 {
-			
 		}
+		ctx.close();
+			
+		
 	}
 
 }
