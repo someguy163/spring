@@ -17,21 +17,7 @@ iterator.hasNext()
 
 Ex
 
-		package ch04_pjt_01.ems.utils;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Set;
-
-public class IterEx {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-
-		System.out.println("ArrayList");
+System.out.println("ArrayList");
 
 		ArrayList<String> cars = new ArrayList<>();
 		cars.add("a");
@@ -101,11 +87,6 @@ public class IterEx {
 			Object element = listIterator.previous();
 			System.out.println(element + " ");
 		}
-		System.out.println();
-
-	}
-
-}
 
   
 
