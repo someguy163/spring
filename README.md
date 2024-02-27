@@ -17,18 +17,24 @@ iterator.hasNext()
 
 Ex
 
+		System.out.println("ArrayList");
+		
 		ArrayList<String> cars = new ArrayList<>();
 		cars.add("a");
 		cars.add("b");
 		cars.add("c");
 		cars.add("d");
 		
-		Iterator<String> iterator = cars.iterator();
+//		Iterator<String> iterator = cars.iterator();
+//		
+//		while (iterator.hasNext()) {
+//			
+//			System.out.println(iterator.next());
+//			
+//		}
 		
-		while (iterator.hasNext()) {
-			String str = iterator.next();
-			System.out.println(str);
-			
+		for(String string : cars) {
+			System.out.println(string);
 		}
 
   출력 : a b c d
