@@ -93,3 +93,41 @@ System.out.println("ArrayList");
 
 pom.xml : 메이븐 설정파일
 필요한 라이브러리를 연결하고 빌드 설정을 담당함
+
+
+
+applicationContext.xml에서
+
+<bean id="initSampleData"
+		class="ch04_pjt_01.ems.utils.InitSampleData">
+
+		<property name="sNums">
+			<array>
+				<value>hbs001</value>
+				<value>hbs002</value>
+				<value>hbs003</value>
+				<value>hbs004</value>
+				<value>hbs005</value>
+			</array>
+		</property>
+
+  class 경로에 저장된 필드값이 Array일경우 XML에서 위와같이 지정할수있다.
+  property name을 통해서 필드명을 지정하고 value를 통해서 값을 넣어준다.
+
+  클래스 파일에서 생성자가 dafualt 생성자가 아닌 매개변수를 받는 생성자가 있을경우에는
+
+java.code
+	public StudentModifyService(StudentDAO studentDAO) {
+	
+		this.studentDAO = studentDAO;
+	}
+  
+applicationContext.xml
+  	<bean id="studentModifyService"
+		class="ch04_pjt_01.ems.member.service.StudentModifyService">
+		<constructor-arg ref="studentDao" />
+	</bean>
+ constructor-arg 태그를 통해 ref에다 매개변수로 들어가는 bean id를 넣어주면된다
+  
+
+
