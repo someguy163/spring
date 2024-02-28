@@ -31,13 +31,13 @@ public class PrintStudentInformationService {
 			String key = iterator.next();
 			Student student = allStudents.get(key);
 			
-			System.out.println("sNum : " + student.getsNum() );
-			System.out.println("sId : " + student.getsId() );
-			System.out.println("sPw : " + student.getsPw() );
-			System.out.println("sName : " + student.getsName() );
-			System.out.println("sAge : " + student.getsAge() );
-			System.out.println("sGender : " + student.getsGender() );
-			System.out.println("sMajor : " + student.getsMajor() );
+			System.out.print("sNum : " + student.getsNum() +"\t" );
+			System.out.print("sId : " + student.getsId() +"\t" );
+			System.out.print("sPw : " + student.getsPw() +"\t" );
+			System.out.print("sName : " + student.getsName() +"\t" );
+			System.out.print("sAge : " + student.getsAge()  +"\t");
+			System.out.print("sGender : " + student.getsGender()  +"\t");
+			System.out.println("sMajor : " + student.getsMajor()  );
 			
 		}
 		System.out.println("END-------");

@@ -22,25 +22,106 @@ public class EMSInformaionService {
 	
 	private List<String> developers;
 	private Map<String, String> administrators;
-	private Map<String, DBConnectionInfo> dbInfo;
+	private Map<String, DBConnectionInfo> dbInfos;
 	
-	public EMSInformaionService(String info, String copyRight, String ver, int sYear, int sMonth, int sDay, int eYear,
-			int eMonth, int eDay, List<String> developers, Map<String, String> administrators,
-			Map<String, DBConnectionInfo> dbInfo) {
-		this.info = info;
-		this.copyRight = copyRight;
-		this.ver = ver;
-		this.sYear = sYear;
-		this.sMonth = sMonth;
-		this.sDay = sDay;
-		this.eYear = eYear;
-		this.eMonth = eMonth;
-		this.eDay = eDay;
-		this.developers = developers;
-		this.administrators = administrators;
-		this.dbInfo = dbInfo;
+
+
+	public String getInfo() {
+		return info;
 	}
-	
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public String getCopyRight() {
+		return copyRight;
+	}
+
+	public void setCopyRight(String copyRight) {
+		this.copyRight = copyRight;
+	}
+
+	public String getVer() {
+		return ver;
+	}
+
+	public void setVer(String ver) {
+		this.ver = ver;
+	}
+
+	public int getsYear() {
+		return sYear;
+	}
+
+	public void setsYear(int sYear) {
+		this.sYear = sYear;
+	}
+
+	public int getsMonth() {
+		return sMonth;
+	}
+
+	public void setsMonth(int sMonth) {
+		this.sMonth = sMonth;
+	}
+
+	public int getsDay() {
+		return sDay;
+	}
+
+	public void setsDay(int sDay) {
+		this.sDay = sDay;
+	}
+
+	public int geteYear() {
+		return eYear;
+	}
+
+	public void seteYear(int eYear) {
+		this.eYear = eYear;
+	}
+
+	public int geteMonth() {
+		return eMonth;
+	}
+
+	public void seteMonth(int eMonth) {
+		this.eMonth = eMonth;
+	}
+
+	public int geteDay() {
+		return eDay;
+	}
+
+	public void seteDay(int eDay) {
+		this.eDay = eDay;
+	}
+
+	public List<String> getDevelopers() {
+		return developers;
+	}
+
+	public void setDevelopers(List<String> developers) {
+		this.developers = developers;
+	}
+
+	public Map<String, String> getAdministrators() {
+		return administrators;
+	}
+
+	public void setAdministrators(Map<String, String> administrators) {
+		this.administrators = administrators;
+	}
+
+	public Map<String, DBConnectionInfo> getDbInfos() {
+		return dbInfos;
+	}
+
+	public void setDbInfos(Map<String, DBConnectionInfo> dbInfos) {
+		this.dbInfos = dbInfos;
+	}
+
 	public void printEMSInformation() {
 		System.out.println("EMS INFORMATION START______");
 		
@@ -55,12 +136,12 @@ public class EMSInformaionService {
 	}
 	
 	private void printDBInfo() {
-		Set<String> keys = dbInfo.keySet();
+		Set<String> keys = dbInfos.keySet();
 		Iterator<String> iterator = keys.iterator();
 		
 		while (iterator.hasNext()) {
 			String key =iterator.next();
-			DBConnectionInfo info = dbInfo.get(key);
+			DBConnectionInfo info = dbInfos.get(key);
 			System.out.println("[ "+ key +" DB]");
 			System.out.println("url : " + info.getUrl());
 			System.out.println("userID : " + info.getUserId());
