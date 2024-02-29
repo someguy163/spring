@@ -17,7 +17,10 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationContext.xml");
+//		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:appCtx1.xml","classpath:appCtx2.xml","classpath:appCtx3.xml");
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:appCtxImport.xml"
+				+ ""
+				+ "");
 
 		InitSampleData initSampleData = ctx.getBean("initSampleData",InitSampleData.class);
 		String sNums[] = initSampleData.getsNums();

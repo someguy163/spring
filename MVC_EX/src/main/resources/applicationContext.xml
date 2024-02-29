@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="StudentDao" class="StudentDao.StudentDao"></bean>
+
+	<bean id="deleteInfo" class="Service.DeleteInfo">
+		<constructor-arg ref="StudentDao"></constructor-arg>
+	</bean>
+	<bean id="insertInfo" class="Service.InsertInfo">
+		<constructor-arg ref="StudentDao"></constructor-arg>
+	</bean>
+	<bean id="selectAll" class="Service.SelectAll">
+		<constructor-arg ref="StudentDao"></constructor-arg>
+	</bean>
+	<bean id="selectInfo" class="Service.SelectInfo">
+		<constructor-arg ref="StudentDao"></constructor-arg>
+	</bean>
+	<bean id="updateInfo" class="Service.UpdateInfo">
+		<constructor-arg ref="StudentDao"></constructor-arg>
+	</bean>
+
+	<bean id="SampleData" class="SampleData.SampleData">
+
+		<property name="Ids">
+			<array>
+				<value>aaaaa</value>
+				<value>bbbbb</value>
+				<value>ccccc</value>
+				<value>ddddd</value>
+				<value>eeeee</value>
+			</array>
+		</property>
+		<property name="Pws">
+			<array>
+				<value>AAAAA</value>
+				<value>BBBBB</value>
+				<value>CCCCC</value>
+				<value>DDDDD</value>
+				<value>EEEEE</value>
+			</array>
+		</property>
+		<property name="phones">
+			<array>
+				<value>96539</value>
+				<value>64875</value>
+				<value>15284</value>
+				<value>48765</value>
+				<value>28661</value>
+			</array>
+		</property>
+		<property name="eMails">
+			<array>
+				<value>agatha</value>
+				<value>barbara</value>
+				<value>chris</value>
+				<value>doris</value>
+				<value>elva</value>
+			</array>
+		</property>
+
+		<property name="JoinDates">
+			<array>
+				<value>2022-02-01</value>
+				<value>2023-08-01</value>
+				<value>2024-04-01</value>
+				<value>2022-03-01</value>
+				<value>2022-07-01</value>
+			</array>
+		</property>
+		<property name="lastDates">
+			<array>
+				<value>2022-02-28</value>
+				<value>2023-08-31</value>
+				<value>2024-04-30</value>
+				<value>2022-03-31</value>
+				<value>2022-07-31</value>
+			</array>
+		</property>
+
+	</bean>
+
+	<bean id="allSelectInfo" class="Service.AllStudentPrint">
+		<constructor-arg ref="selectAll"></constructor-arg>
+	</bean>
+</beans>

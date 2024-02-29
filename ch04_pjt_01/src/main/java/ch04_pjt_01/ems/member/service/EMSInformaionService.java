@@ -24,6 +24,8 @@ public class EMSInformaionService {
 	private Map<String, String> administrators;
 	private Map<String, DBConnectionInfo> dbInfos;
 	
+	
+	
 
 
 	public String getInfo() {
