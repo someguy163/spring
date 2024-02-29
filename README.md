@@ -117,10 +117,11 @@ applicationContext.xml에서
   클래스 파일에서 생성자가 dafualt 생성자가 아닌 매개변수를 받는 생성자가 있을경우에는
 
 java.code
+
 	public StudentModifyService(StudentDAO studentDAO) {
-	
 		this.studentDAO = studentDAO;
 	}
+ 
   
 applicationContext.xml
   	<bean id="studentModifyService"
