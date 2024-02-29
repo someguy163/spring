@@ -128,6 +128,12 @@ applicationContext.xml
 		<constructor-arg ref="studentDao" />
 	</bean>
  constructor-arg 태그를 통해 ref에다 매개변수로 들어가는 bean id를 넣어주면된다
-  
+ 
+ 아래와 같이 하면된다 
+
+ 	<bean id="studentModifyService"
+		class="ch04_pjt_01.ems.member.service.StudentModifyService">
+		<constructor-arg ref="studentDao" />
+	</bean>
 
 
