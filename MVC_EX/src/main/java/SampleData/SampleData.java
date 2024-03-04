@@ -1,6 +1,6 @@
 package SampleData;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class SampleData {
 
@@ -9,8 +9,8 @@ public class SampleData {
 	private String[] Pws;
 	private String[] phones;
 	private String[] eMails;
-	private Date[] JoinDates;
-	private Date[] lastDates;
+	private String[] JoinDates;
+	private String[] lastDates;
 	public String[] getIds() {
 		return Ids;
 	}
@@ -35,18 +35,23 @@ public class SampleData {
 	public void seteMails(String[] eMails) {
 		this.eMails = eMails;
 	}
-	public Date[] getJoinDates() {
+	public String[] getJoinDates() {
 		return JoinDates;
 	}
-	public void setJoinDates(Date[] joinDates) {
+	public void setJoinDates(String[] joinDates) {
 		JoinDates = joinDates;
 	}
-	public Date[] getLastDates() {
+	public String[] getLastDates() {
 		return lastDates;
 	}
-	public void setLastDates(Date[] lastDates) {
+	public void setLastDates(String[] lastDates) {
 		this.lastDates = lastDates;
 	}
+	
+	
+	
+	
+	
 	
 	
 	

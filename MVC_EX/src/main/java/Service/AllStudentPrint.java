@@ -16,7 +16,7 @@ public class AllStudentPrint {
 	}
 
 	public void AllStudentInfo() {
-		Map<String, StudentDo> allstudent = new HashMap<String,StudentDo>();
+		Map<String, StudentDo> allstudent = selectAll.allSelect();
 		Set<String> Keys = allstudent.keySet();
 		Iterator<String> iterator = Keys.iterator();
 		
@@ -30,8 +30,8 @@ public class AllStudentPrint {
 			System.out.print("pwd : " + studentDo.getPw() + "\t");
 			System.out.print("phones : " + studentDo.getPhone() + "\t");
 			System.out.print("eMail : " + studentDo.geteMail() + "\t");
-			System.out.print("joineDates : " + studentDo.getJoinDate() + "\t");
-			System.out.print("lastDates : " + studentDo.getLastDate() + "\t");
+			System.out.print("joinDates : " + studentDo.getJoinDate() + "\t");
+			System.out.println("lastDates : " + studentDo.getLastDate() + "\t");
 		}
 		System.out.println("모든 회원 출력 종료");
 	}

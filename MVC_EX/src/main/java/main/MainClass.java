@@ -1,12 +1,14 @@
 package main;
 
-import java.sql.Date;
+
+import java.util.Date;
 import java.util.Iterator;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import SampleData.SampleData;
 import Service.AllStudentPrint;
+import Service.DeleteInfo;
 import Service.InsertInfo;
 import StudentDo.StudentDo;
 
@@ -20,17 +22,21 @@ public class MainClass {
 		String Pwds[] = sampleData.getPws();
 		String phones[] = sampleData.getPhones();
 		String emails[] = sampleData.geteMails();
-		Date joinDate[] = sampleData.getJoinDates();
-		Date lasDate[] = sampleData.getLastDates();
+		String joinDate[] = sampleData.getJoinDates();
+		String lasDate[] = sampleData.getLastDates();
 		
 		InsertInfo intserInfo = ctx.getBean("insertInfo",InsertInfo.class);
 		
 		for(int i =0; i<Ids.length; i++) {
 			intserInfo.insert(new StudentDo(Ids[i], Pwds[i], phones[i], emails[i], joinDate[i], lasDate[i]));
-			
-			AllStudentPrint allStudentPrint = ctx.getBean("allSelectInfo",AllStudentPrint.class);
-			allStudentPrint.AllStudentInfo();
 		}
+		AllStudentPrint allStudentPrint = ctx.getBean("allSelectInfo",AllStudentPrint.class);
+		allStudentPrint.AllStudentInfo();
+		
+		DeleteInfo deleteInfo = ctx.getBean("deleteInfo",DeleteInfo.class);
+		
+		deleteInfo.delete("bbbbb");
+		allStudentPrint.AllStudentInfo();
 	}
 
 }

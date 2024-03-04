@@ -12,7 +12,7 @@ public class Student {
 	
 	
 	public Student(String sNum, String sId, String sPw, String sName, int sAge, char sGender, String sMajor) {
-		super();
+
 		this.sNum = sNum;
 		this.sId = sId;
 		this.sPw = sPw;

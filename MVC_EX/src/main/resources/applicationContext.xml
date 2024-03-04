@@ -79,7 +79,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 				<value>2022-07-31</value>
 			</array>
 		</property>
-
 	</bean>
 
 	<bean id="allSelectInfo" class="Service.AllStudentPrint">
