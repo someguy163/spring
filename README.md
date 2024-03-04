@@ -1,3 +1,15 @@
+//bean , annotaion
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+</beans>
+
 chp02 = DI 의존성 주입
 
 
@@ -91,6 +103,14 @@ System.out.println("ArrayList");
   
 
 
+ch05_pjt_01 Autowired 내용
+
+ch05_pjt_02_resource @resource 내용
+
+ch05_pjt_03 qualifier 내용
+
+qualifer란 객체의 이름이라고 생각하면 된다
+
 pom.xml : 메이븐 설정파일
 필요한 라이브러리를 연결하고 빌드 설정을 담당함
 
@@ -138,3 +158,21 @@ applicationContext.xml
 	</bean>
 
 
+
+autowired 어노테이션 사용하면
+
+	@Autowired
+	private ContactDao contactDao;
+
+는 
+
+	//	public ContactRegisterService(ContactDao contactDao) {
+	//		System.out.println("contactDao : " + contactDao);
+	//		this.contactDao = contactDao;
+	//	}
+
+ 과 같다
+
+ 생성사를 생략가능하다
+
+ 
