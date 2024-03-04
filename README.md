@@ -151,4 +151,20 @@ applicationContext.xml
 
 
 
+autowired 어노테이션 사용하면
 
+	@Autowired
+	private ContactDao contactDao;
+
+는 
+
+	//	public ContactRegisterService(ContactDao contactDao) {
+	//		System.out.println("contactDao : " + contactDao);
+	//		this.contactDao = contactDao;
+	//	}
+
+ 과 같다
+
+ 생성사를 생략가능하다
+
+ 
