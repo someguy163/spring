@@ -139,6 +139,7 @@ applicationContext.xml
 
 
 //bean , annotaion
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
