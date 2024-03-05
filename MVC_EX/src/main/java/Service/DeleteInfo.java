@@ -1,17 +1,20 @@
 package Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import StudentDao.StudentDao;
 import StudentDo.StudentDo;
 
 
 public class DeleteInfo {
 	
+	@Autowired
 	private StudentDao studentDao;
 
-	public DeleteInfo(StudentDao studentDao) {
-	
-		this.studentDao = studentDao;
-	}
+//	public DeleteInfo(StudentDao studentDao) {
+//	
+//		this.studentDao = studentDao;
+//	}
 	
 	public void delete(String Id) {
 		if (verify(Id)) {

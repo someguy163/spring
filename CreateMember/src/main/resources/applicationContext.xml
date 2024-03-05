@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
 	<bean id="initSampleData"
 		class="ch04_pjt_01.ems.utils.InitSampleData">
 
@@ -72,31 +76,32 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 		</property>
 	</bean>
 
+
 	<bean id="studentDao"
 		class="ch04_pjt_01.ems.member.dao.StudentDAO"></bean>
 	<bean id="studentRegisterService"
 		class="ch04_pjt_01.ems.member.service.StudentRegisterService">
-		<constructor-arg ref="studentDao" />
+		<!-- <constructor-arg ref="studentDao" /> -->
 	</bean>
 	<bean id="studentDeleteService"
 		class="ch04_pjt_01.ems.member.service.StudentDeleteService">
-		<constructor-arg ref="studentDao" />
+		<!-- <constructor-arg ref="studentDao" /> -->
 	</bean>
 	<bean id="studentModifyService"
 		class="ch04_pjt_01.ems.member.service.StudentModifyService">
-		<constructor-arg ref="studentDao" />
+		<!-- <constructor-arg ref="studentDao" /> -->
 	</bean>
 	<bean id="studentSelectService"
 		class="ch04_pjt_01.ems.member.service.StudentSelectService">
-		<constructor-arg ref="studentDao" />
+		<!-- <constructor-arg ref="studentDao" /> -->
 	</bean>
 	<bean id="studentAllSelectService"
 		class="ch04_pjt_01.ems.member.service.StudentAllSelectService">
-		<constructor-arg ref="studentDao" />
+		<!-- <constructor-arg ref="studentDao" /> -->
 	</bean>
 	<bean id="printStudentInformationService"
 		class="ch04_pjt_01.ems.member.service.PrintStudentInformationService">
-		<constructor-arg ref="studentAllSelectService" />
+		<!-- <constructor-arg ref="studentAllSelectService" /> -->
 	</bean>
 
 	<bean id="dev_DBConnectionInfoDev"
@@ -167,13 +172,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 					<key>
 						<value>dev</value>
 					</key>
-					<ref bean ="dev_DBConnectionInfoDev"/>
+					<ref bean="dev_DBConnectionInfoDev" />
 				</entry>
 				<entry>
 					<key>
 						<value>real</value>
 					</key>
-					<ref bean ="real_DBConnectionInfo"/>
+					<ref bean="real_DBConnectionInfo" />
 				</entry>
 			</map>
 		</property>

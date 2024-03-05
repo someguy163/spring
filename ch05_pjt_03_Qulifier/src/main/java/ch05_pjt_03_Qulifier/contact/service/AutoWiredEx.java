@@ -7,7 +7,7 @@ public class AutoWiredEx {
 
 
 	@Autowired
-	public AutoWiredEx(@Qualifier("qualifierBean") FirstBean fBean , SecondBean sBean) {
+	public AutoWiredEx(@Qualifier("qualifierBean") FirstBean fBean , @Autowired(required = false) SecondBean sBean) {
 		System.out.println("fBean : " + fBean);
 		System.out.println("sBean : " + sBean);
 	}

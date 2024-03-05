@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
 
 	<bean id="StudentDao" class="StudentDao.StudentDao"></bean>
 
 	<bean id="deleteInfo" class="Service.DeleteInfo">
-		<constructor-arg ref="StudentDao"></constructor-arg>
+		<!-- <constructor-arg ref="StudentDao"></constructor-arg> -->
 	</bean>
 	<bean id="insertInfo" class="Service.InsertInfo">
-		<constructor-arg ref="StudentDao"></constructor-arg>
+		<!-- <constructor-arg ref="StudentDao"></constructor-arg> -->
 	</bean>
 	<bean id="selectAll" class="Service.SelectAll">
-		<constructor-arg ref="StudentDao"></constructor-arg>
+		<!-- <constructor-arg ref="StudentDao"></constructor-arg> -->
 	</bean>
 	<bean id="selectInfo" class="Service.SelectInfo">
-		<constructor-arg ref="StudentDao"></constructor-arg>
+		<!-- <constructor-arg ref="StudentDao"></constructor-arg> -->
 	</bean>
 	<bean id="updateInfo" class="Service.UpdateInfo">
-		<constructor-arg ref="StudentDao"></constructor-arg>
+		<!-- <constructor-arg ref="StudentDao"></constructor-arg> -->
 	</bean>
 
 	<bean id="SampleData" class="SampleData.SampleData">
@@ -82,6 +86,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	</bean>
 
 	<bean id="allSelectInfo" class="Service.AllStudentPrint">
-		<constructor-arg ref="selectAll"></constructor-arg>
+		<!-- <constructor-arg ref="selectAll"></constructor-arg> -->
 	</bean>
 </beans>

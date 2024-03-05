@@ -46,8 +46,10 @@
 		class="ch05_pjt_03_Qulifier.contact.service.FirstBean"></bean>
 	<bean id="firstBean3"
 		class="ch05_pjt_03_Qulifier.contact.service.FirstBean"></bean>
-	<bean id="secondBean"
+		
+<!-- 	<bean id="secondBean"
 		class="ch05_pjt_03_Qulifier.contact.service.SecondBean"></bean>
+		 -->
 	<bean id="thirdBean"
 		class="ch05_pjt_03_Qulifier.contact.service.ThirdBean"></bean>
 	<bean id="fourthBean1"

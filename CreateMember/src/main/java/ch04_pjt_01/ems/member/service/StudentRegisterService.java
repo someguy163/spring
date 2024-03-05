@@ -1,15 +1,18 @@
 package ch04_pjt_01.ems.member.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch04_pjt_01.ems.member.Student;
 import ch04_pjt_01.ems.member.dao.StudentDAO;
 
 public class StudentRegisterService {
-
+	@Autowired
 	private StudentDAO studentDAO;
 
-	public StudentRegisterService(StudentDAO studentDAO) {
-		this.studentDAO = studentDAO;
-	}
+
+//	public StudentRegisterService(StudentDAO studentDAO) {
+//		this.studentDAO = studentDAO;
+//	}
 	
 	public void register(Student student) {
 		if (verify(student.getsNum())) {

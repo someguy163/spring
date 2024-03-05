@@ -1,17 +1,19 @@
 package Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import StudentDao.StudentDao;
 import StudentDo.StudentDo;
 
 
 public class SelectInfo {
 
-	
+	@Autowired
 	private StudentDao studentDao;
 
-	public SelectInfo(StudentDao studentDao) {
-		this.studentDao = studentDao;
-	}
+//	public SelectInfo(StudentDao studentDao) {
+//		this.studentDao = studentDao;
+//	}
 	
 	
 	public StudentDo select(String ID) {

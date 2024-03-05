@@ -1,5 +1,7 @@
 package ch04_pjt_01.ems.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 	private String sNum;
 	private String sId;
@@ -8,7 +10,6 @@ public class Student {
 	private int sAge;
 	private char sGender;
 	private String sMajor;
-	
 	
 	
 	public Student(String sNum, String sId, String sPw, String sName, int sAge, char sGender, String sMajor) {

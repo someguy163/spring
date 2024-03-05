@@ -5,15 +5,18 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import StudentDo.StudentDo;
 
 public class AllStudentPrint {
 
+	@Autowired
 	SelectAll selectAll;
 
-	public AllStudentPrint(SelectAll selectAll) {
-		this.selectAll = selectAll;
-	}
+//	public AllStudentPrint(SelectAll selectAll) {
+//		this.selectAll = selectAll;
+//	}
 
 	public void AllStudentInfo() {
 		Map<String, StudentDo> allstudent = selectAll.allSelect();

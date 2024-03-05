@@ -4,19 +4,21 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch04_pjt_01.ems.member.Student;
 
 public class PrintStudentInformationService {
 
-	
+	@Autowired
 	StudentAllSelectService allSelectService;
 
 
 	
-	public PrintStudentInformationService(StudentAllSelectService allSelectService) {
-		super();
-		this.allSelectService = allSelectService;
-	}
+//	public PrintStudentInformationService(StudentAllSelectService allSelectService) {
+//		super();
+//		this.allSelectService = allSelectService;
+//	}
 
 
 

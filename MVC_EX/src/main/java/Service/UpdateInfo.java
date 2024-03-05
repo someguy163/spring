@@ -1,16 +1,18 @@
 package Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import StudentDao.StudentDao;
 import StudentDo.StudentDo;
 
 
 public class UpdateInfo {
-
+@Autowired
 	private StudentDao studentDao;
 
-	public UpdateInfo(StudentDao studentDao) {
-		this.studentDao = studentDao;
-	}
+//	public UpdateInfo(StudentDao studentDao) {
+//		this.studentDao = studentDao;
+//	}
 	
 	public void update(StudentDo studentDo) {
 		if (veify(studentDo.getId())) {

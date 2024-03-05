@@ -1,16 +1,18 @@
 package ch04_pjt_01.ems.member.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch04_pjt_01.ems.member.Student;
 import ch04_pjt_01.ems.member.dao.StudentDAO;
 
 public class StudentSelectService {
 
-	
+	@Autowired
 	private StudentDAO studentDAO;
 
-	public StudentSelectService(StudentDAO studentDAO) {
-		this.studentDAO = studentDAO;
-	}
+//	public StudentSelectService(StudentDAO studentDAO) {
+//		this.studentDAO = studentDAO;
+//	}
 	
 	public Student select(String sNum) {
 		if (verify(sNum)) {

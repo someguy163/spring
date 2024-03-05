@@ -1,17 +1,19 @@
 package Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import StudentDao.StudentDao;
 import StudentDo.StudentDo;
 
 public class InsertInfo {
 
-	
+	@Autowired
 	private StudentDao studentDao;
 
-	public InsertInfo(StudentDao studentDao) {
-	
-		this.studentDao = studentDao;
-	}
+//	public InsertInfo(StudentDao studentDao) {
+//	
+//		this.studentDao = studentDao;
+//	}
 	
 	public void insert(StudentDo studentDo) {
 		if (verify(studentDo.getId())) {

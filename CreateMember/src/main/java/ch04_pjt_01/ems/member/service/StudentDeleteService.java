@@ -1,16 +1,18 @@
 package ch04_pjt_01.ems.member.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch04_pjt_01.ems.member.Student;
 import ch04_pjt_01.ems.member.dao.StudentDAO;
 
 public class StudentDeleteService {
-
+	@Autowired
 	private StudentDAO studentDAO;
 
-	public StudentDeleteService(StudentDAO studentDAO) {
-	
-		this.studentDAO = studentDAO;
-	}
+//	public StudentDeleteService(StudentDAO studentDAO) {
+//	
+//		this.studentDAO = studentDAO;
+//	}
 	
 	public void delect(String sNum) {
 		if (verify(sNum)) {
