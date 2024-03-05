@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<beans xmlns="http://www.springframework.org/schema/beans"  
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-    xsi:schemaLocation="http://www.springframework.org/schema/beans 
-    http://www.springframework.org/schema/beans/spring-beans.xsd">  
-    
-	<!-- InitSampleData 빈 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
 	<bean id="initSampleData"
-		class="ch04_pjt_01.ems.utils.InitSampleData">
+		class="ch06_pjt_01.ems.utils.InitSampleData">
+
 		<property name="sNums">
 			<array>
 				<value>hbs001</value>
@@ -28,11 +30,11 @@
 		</property>
 		<property name="sPws">
 			<array>
-				<value>p0001</value>
-				<value>p0002</value>
-				<value>p0003</value>
-				<value>p0004</value>
-				<value>p0005</value>
+				<value>96539</value>
+				<value>64875</value>
+				<value>15284</value>
+				<value>48765</value>
+				<value>28661</value>
 			</array>
 		</property>
 		<property name="sNames">
@@ -44,6 +46,7 @@
 				<value>elva</value>
 			</array>
 		</property>
+
 		<property name="sAges">
 			<array>
 				<value>19</value>
@@ -64,79 +67,71 @@
 		</property>
 		<property name="sMajors">
 			<array>
-				<value>English</value>
-				<value>Korean</value>
-				<value>French</value>
+				<value>English Literature</value>
+				<value>Korean Language and Literature</value>
+				<value>French Language and Literature</value>
 				<value>Philosophy</value>
 				<value>History</value>
 			</array>
 		</property>
-		
 	</bean>
-	
-	<!-- StudentDao 빈 -->
+
+
 	<bean id="studentDao"
-		class="ch04_pjt_01.ems.member.dao.StudentDao" />
-		
-	<!-- StudentRegisterService 빈 생성 -->
+		class="ch06_pjt_01.ems.member.dao.StudentDAO"></bean>
 	<bean id="studentRegisterService"
-		class="ch04_pjt_01.ems.member.service.StudentRegisterService">
-		<constructor-arg ref="studentDao" />
-	</bean>	
-	
-	<!-- StudentModifyService 빈 생성 -->
-	<bean id="studentModifyService"
-		class="ch04_pjt_01.ems.member.service.StudentModifyService">
+		class="ch06_pjt_01.ems.member.service.StudentRegisterService">
 		<constructor-arg ref="studentDao" />
 	</bean>
-
-	<!-- StudentDeleteService 빈 생성 -->
 	<bean id="studentDeleteService"
-		class="ch04_pjt_01.ems.member.service.StudentDeleteService">
+		class="ch06_pjt_01.ems.member.service.StudentDeleteService">
 		<constructor-arg ref="studentDao" />
 	</bean>
-
-	<!-- StudentSelectService 빈 생성 -->
+	<bean id="studentModifyService"
+		class="ch06_pjt_01.ems.member.service.StudentModifyService">
+		<constructor-arg ref="studentDao" />
+	</bean>
 	<bean id="studentSelectService"
-		class="ch04_pjt_01.ems.member.service.StudentSelectService">
+		class="ch06_pjt_01.ems.member.service.StudentSelectService">
 		<constructor-arg ref="studentDao" />
 	</bean>
-
-	<!-- StudentAllSelectService 빈 생성 -->
 	<bean id="studentAllSelectService"
-		class="ch04_pjt_01.ems.member.service.StudentAllSelectService">
+		class="ch06_pjt_01.ems.member.service.StudentAllSelectService">
 		<constructor-arg ref="studentDao" />
 	</bean>
-
-	<!-- PrintStudentInformationService 빈 생성 -->
 	<bean id="printStudentInformationService"
-		class="ch04_pjt_01.ems.member.service.PrintStudentInformationService">
+		class="ch06_pjt_01.ems.member.service.PrintStudentInformationService">
 		<constructor-arg ref="studentAllSelectService" />
 	</bean>
 
-	<!-- 개발에 이용하는 데이터베이스 빈 생성 -->
 	<bean id="dev_DBConnectionInfoDev"
-		class="ch04_pjt_01.ems.member.DBConnectionInfo">
+		class="ch06_pjt_01.ems.member.DBConnectionInfo">
 		<property name="url" value="000.000.000.000" />
-		<property name="userId" value="admin" />
-		<property name="userPw" value="0000" />
+		<property name="userId">
+			<value>
+				admin
+			</value>
+		</property>
+		<property name="userPw">
+			<value>
+				0000
+			</value>
+		</property>
 	</bean>
 
-	<!-- 실제 서비스에 이용하는 데이터베이스 빈 생성 -->
 	<bean id="real_DBConnectionInfo"
-		class="ch04_pjt_01.ems.member.DBConnectionInfo">
+		class="ch06_pjt_01.ems.member.DBConnectionInfo">
 		<property name="url" value="111.111.111.111" />
 		<property name="userId" value="master" />
 		<property name="userPw" value="1111" />
 	</bean>
-	
-	<!-- EMSInformationService 빈 -->
+
 	<bean id="eMSInformationService"
-		class="ch04_pjt_01.ems.member.service.EMSInformationService">
+		class="ch06_pjt_01.ems.member.service.EMSInformaionService">
 		<property name="info"
-			value="Education Management System program was developed in 2022." />
+			value="Education Management System program was developed in 2022" />
 		<property name="copyRight"
-			value="COPYRIGHT(C) 2022 EMS CO., LTD. ALL RIGHT RESERVED. CONTACT MASTER FOR MORE INFORMATION." />
+			value="COPYRIGHT(c) 2022 EMS CO ., LTD . ALL RIGHT RESERVED. CONTACT MASTER FOR MORE INFORMATION" />
 		<property name="ver" value="The version is 1.0" />
 		<property name="sYear" value="2022" />
 		<property name="sMonth" value="3" />
@@ -144,8 +139,7 @@
 		<property name="eYear" value="2022" />
 		<property name="eMonth" value="4" />
 		<property name="eDay" value="30" />
-		
-		<!-- List타입 필드 초기화 -->
+
 		<property name="developers">
 			<list>
 				<value>Cheney.</value>
@@ -155,8 +149,7 @@
 				<value>Kian.</value>
 			</list>
 		</property>
-		
-		<!-- administrators 필드 초기화 -->
+
 		<property name="administrators">
 			<map>
 				<entry>
@@ -173,32 +166,21 @@
 				</entry>
 			</map>
 		</property>
-		
-		<!-- dbInfos 필드 초기화 -->
 		<property name="dbInfos">
 			<map>
 				<entry>
 					<key>
 						<value>dev</value>
 					</key>
-					<ref bean="dev_DBConnectionInfoDev" />	<!-- 개발용 데이터베이스 지정 -->
+					<ref bean="dev_DBConnectionInfoDev" />
 				</entry>
 				<entry>
 					<key>
 						<value>real</value>
 					</key>
-					<ref bean="real_DBConnectionInfo" />	<!-- 실제 서비스 데이터베이스 지정 -->
+					<ref bean="real_DBConnectionInfo" />
 				</entry>
 			</map>
 		</property>
-		
 	</bean>
-	
 </beans>
-
-
-
-
-
-
-

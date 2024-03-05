@@ -1,30 +1,36 @@
 package ch06_pjt_01.ems.member.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch06_pjt_01.ems.member.Student;
-import ch06_pjt_01.ems.member.dao.StudentDao;
+import ch06_pjt_01.ems.member.dao.StudentDAO;
 
 public class StudentSelectService {
+
 	
-	private StudentDao studentDao;
+	private StudentDAO studentDAO;
 
-	public StudentSelectService(StudentDao studentDao) {
-
-		this.studentDao = studentDao;
+	public StudentSelectService(StudentDAO studentDAO) {
+		this.studentDAO = studentDAO;
 	}
+	
+
 
 	public Student select(String sNum) {
 		if (verify(sNum)) {
-			return studentDao.select(sNum);
-
-		} else {
-			System.out.println("Student information is available.");
+			return studentDAO.select(sNum);
 		}
-
+		else {
+			System.out.println("Student information is available");
+		}
 		return null;
 	}
-	
-	public boolean verify(String sNum) {
-		Student student = studentDao.select(sNum);
-		return student != null ? true : false;
+
+	private boolean verify(String sNum) {
+		Student student = studentDAO.select(sNum);
+		return student !=null ? true : false;
 	}
+	
+	
+	
 }

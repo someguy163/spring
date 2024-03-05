@@ -4,36 +4,48 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch06_pjt_01.ems.member.Student;
+import ch06_pjt_01.ems.member.dao.StudentDAO;
 
 public class PrintStudentInformationService {
 
+	
 	StudentAllSelectService allSelectService;
 
+
+	
 	public PrintStudentInformationService(StudentAllSelectService allSelectService) {
+		super();
 		this.allSelectService = allSelectService;
 	}
-	
-	public void printStudentsInfo() {
-		Map<String, Student> allStudent = allSelectService.allSelect();
-		Set<String> keys = allStudent.keySet();
-		Iterator<String> iterator = keys.iterator();  
-		// 컨테이너, 특히 리스트를 순회할 수 있게 해주는 객체
+
+
+
+
+	public void printStudensInfo() {
+		Map<String, Student> allStudents = allSelectService.allSelect();
+		Set<String> keys =allStudents.keySet();
 		
-		System.out.println("STUDENT LIST START -------------");
+		Iterator<String> iterator = keys.iterator();
+		System.out.println("Students List Start -------");
+		
 		while (iterator.hasNext()) {
 			String key = iterator.next();
-			Student student = allStudent.get(key);
-			System.out.print("sNum:" + student.getsNum() + "\t");
-			System.out.print("|sId:" + student.getsId() + "\t");
-			System.out.print("|sPw:" + student.getsPw() + "\t");
-			System.out.print("|sName:" + student.getsName() + "\t");
-			System.out.print("|sAge:" + student.getsAge() + "\t");
-			System.out.print("|sGender:" + student.getsGender() + "\t");
-			System.out.println("|sMajor:" + student.getsMajor() + "\t");
-
+			Student student = allStudents.get(key);
+			
+			System.out.print("sNum : " + student.getsNum() +"\t" );
+			System.out.print("sId : " + student.getsId() +"\t" );
+			System.out.print("sPw : " + student.getsPw() +"\t" );
+			System.out.print("sName : " + student.getsName() +"\t" );
+			System.out.print("sAge : " + student.getsAge()  +"\t");
+			System.out.print("sGender : " + student.getsGender()  +"\t");
+			System.out.println("sMajor : " + student.getsMajor()  );
+			
 		}
-		System.out.println("END ----------------------------");
-		
+		System.out.println("END-------");
 	}
+	
+	
 }

@@ -2,6 +2,7 @@ package ch04_pjt_01.ems;
 
 import javax.print.event.PrintJobAttributeEvent;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import ch04_pjt_01.ems.member.Student;
@@ -21,6 +22,8 @@ public class MainClass {
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationContext.xml"
 				+ ""
 				+ "");
+		
+
 
 		InitSampleData initSampleData = ctx.getBean("initSampleData",InitSampleData.class);
 		String sNums[] = initSampleData.getsNums();

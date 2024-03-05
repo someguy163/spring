@@ -1,10 +1,12 @@
 package ch06_pjt_01.ems.member;
 
 public class DBConnectionInfo {
+
 	
 	private String url;
 	private String userId;
 	private String userPw;
+	
 	
 	public String getUrl() {
 		return url;
@@ -24,5 +26,6 @@ public class DBConnectionInfo {
 	public void setUserPw(String userPw) {
 		this.userPw = userPw;
 	}
+	
 	
 }
