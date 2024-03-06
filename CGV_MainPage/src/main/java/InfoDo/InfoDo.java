@@ -1,5 +1,9 @@
 package InfoDo;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class InfoDo {
 
 //	charts 는 고유 영화 인덱스번호
@@ -10,6 +14,19 @@ public class InfoDo {
 	private String distributor;
 	private String master;
 	private String infoMation;
+	private String newDate;
+	
+	public InfoDo(String charts, String title, String artists, String genre, String distributor, String master,
+			String infoMation, String newDate) {
+		this.charts = charts;
+		this.title = title;
+		this.artists = artists;
+		this.genre = genre;
+		this.distributor = distributor;
+		this.master = master;
+		this.infoMation = infoMation;
+		this.newDate = newDate;
+	}
 	public String getCharts() {
 		return charts;
 	}
@@ -52,17 +69,14 @@ public class InfoDo {
 	public void setInfoMation(String infoMation) {
 		this.infoMation = infoMation;
 	}
-	public InfoDo(String charts, String title, String artists, String genre, String distributor, String master,
-			String infoMation) {
-		super();
-		this.charts = charts;
-		this.title = title;
-		this.artists = artists;
-		this.genre = genre;
-		this.distributor = distributor;
-		this.master = master;
-		this.infoMation = infoMation;
+	public String getNewDate() {
+		return newDate;
 	}
+	public void setNewDate(String newDate) {
+		this.newDate = newDate;
+	}
+	
+
 
 	
 

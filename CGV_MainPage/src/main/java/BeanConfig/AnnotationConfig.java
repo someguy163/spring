@@ -26,7 +26,7 @@ public class AnnotationConfig {
 		
 		InsertSampleData insertSampleData = new InsertSampleData();
 		
-		String charts[] = {"1","2","3","4","5","6"};
+		String charts[] = {"aaa1","aaa2","abc1","sefc3","sdvvb4","sdjfo1"};
 		String title[] = {"노량","서울의 봄" ,"아이언맨" , "아쿠아맨" ,"기생충","짱구"};
 		String artists[] = 
 			{"이순신 , 일본인 , 자랑스런 한국인","전두환 , 노태우 ..등등","아이언맨 , 캡틴아메라카..","주인공과 여러물고기들","기생충 가족들","짱구네 가족과 , 짱구 친구들"};
@@ -34,11 +34,12 @@ public class AnnotationConfig {
 		String distributors[] = {"MIT","MIT","MIT","MIT","MIT","MIT"};
 		String masters[]= {"A감독","B감독","C감독","D감독","E감독","F감독"};
 		String infomations[] = {"이 영화는 이순신장군님에 대한 내용입니다",
-				"전두환씨의 쓰레기같은 업적입니다",
+				"전두환씨의 쓰레기같은 내용입니다",
 				"아이언맨이 세상을 구하는 내용입니다",
 				"물속의 물고기들과 친구가 되는 내용입니다",
 				"한 가족이 부잣집에서 같이 기생하는 내용입니다",
 				"흔한 짱구 극장판입니다"};
+		String newDates[] = {"2024/01/01","2023/11/30","2022/06/17","2024/02/28","2023/12/11","2024/01/01"};
 		insertSampleData.setCharts(charts);
 		insertSampleData.setTitles(title);
 		insertSampleData.setArtists(artists);
@@ -46,6 +47,7 @@ public class AnnotationConfig {
 		insertSampleData.setDistributors(distributors);
 		insertSampleData.setMasters(masters);
 		insertSampleData.setInfomations(infomations);
+		insertSampleData.setNewDates(newDates);
 		return insertSampleData;
 	}
 	

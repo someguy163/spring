@@ -9,6 +9,7 @@ public class InsertSampleData {
 	private String distributors[];
 	private String masters[];
 	private String infomations[];
+	private String newDates[];
 	public String[] getCharts() {
 		return charts;
 	}
@@ -51,6 +52,15 @@ public class InsertSampleData {
 	public void setInfomations(String[] infomations) {
 		this.infomations = infomations;
 	}
+	public String[] getNewDates() {
+		return newDates;
+	}
+	public void setNewDates(String[] newDates) {
+		this.newDates = newDates;
+	}
+	
+	
+	
 	
 	
 		

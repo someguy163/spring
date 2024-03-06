@@ -30,6 +30,7 @@ public class InfoPrintList {
 			System.out.println("배급사 : " + AllmovieInfo.get(key).getDistributor());
 			System.out.println("감독 : " + AllmovieInfo.get(key).getMaster());
 			System.out.println("영화 소개 : " + AllmovieInfo.get(key).getInfoMation());
+			System.out.println("영화 최초등록일 : " + AllmovieInfo.get(key).getNewDate());
 			System.out.println("------------------");
 		}
 		System.out.println("모든 영화 정보 출력 종료");
